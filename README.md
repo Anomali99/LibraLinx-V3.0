@@ -108,13 +108,16 @@ LibraLinx adalah aplikasi untuk memanjemen Perpustakan seperti peminjaman, sumba
 ![](https://user-images.githubusercontent.com/148943855/281033090-d83c8c88-b204-4019-931c-568e139c9148.png)
 
 ###### Laporan Buku
-![](https://user-images.githubusercontent.com/148943855/281033138-2a446774-8d8f-43c7-8873-9d824260f05c.png)
+![](https://user-images.githubusercontent.com/148943855/282760219-553965ae-6172-4c1b-97c4-a5423c111074.png)
 
 ###### Laporan Skripsi
-![](https://user-images.githubusercontent.com/148943855/281033182-f4667564-4cd5-40cd-a9ff-bf03bcc8a819.png)
+![](https://user-images.githubusercontent.com/148943855/282760248-af2e1eee-5af7-47a6-9f90-ae89c4476c54.png)
 
 ###### Laporan Anggota
-![](https://user-images.githubusercontent.com/148943855/281033112-685b11ef-67bf-4a56-a408-5880756f1717.png)
+![](https://user-images.githubusercontent.com/148943855/282760191-c7968847-b745-4c5a-b34e-c27434643677.png)
+
+###### Laporan Skripsi Ketika Menginputkan Cari (Semua Skripsi)
+![](https://user-images.githubusercontent.com/148943855/282760275-f2e2fa3a-0a12-4a07-9dfd-74b611393b95.png)
 
 ##### Menu Profil
 ![](https://user-images.githubusercontent.com/148943855/281033251-9eef6288-be87-4ccd-ac93-7baa9cceb124.png)
