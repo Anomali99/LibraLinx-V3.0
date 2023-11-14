@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c589f6a6-ad63-4d48-8933-f4a9b6348abf">
+	<property name="ireport.zoom" value="1.9487171000000025"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<parameter name="nama" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tgl1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tgl2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<field name="jumlah" class="java.lang.Integer"/>
+	<field name="buku.idBuku" class="java.lang.String"/>
+	<field name="buku.judul" class="java.lang.String"/>
+	<field name="buku.bahasa" class="java.lang.String"/>
+	<field name="buku.fotoSampul" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="44" y="7" width="127" height="67" uuid="86290c04-c22e-44d1-aa44-a414133d0c7f"/>
+				<imageExpression><![CDATA["C:\\Users\\fatiq\\Documents\\NetBeansProjects\\LibraLinx\\src\\img\\libralinx.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="171" y="0" width="384" height="37" uuid="9101c88e-61a6-4799-90ad-3d326f334b0f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PEMINJAMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="30" width="384" height="37" uuid="5763edf0-c486-42ce-aaf5-f7b874ba00d0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="24" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PERPUSTAKAAN LIBRALIX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="61" width="381" height="16" uuid="0cd38adc-741f-4c19-a6ba-5edce020c701"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Jl. Raya Abar-Abir Bungah Gresik   || email : fatiqnur@gmail.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="4" width="555" height="1" uuid="257f9ca5-0e8b-43fa-b979-45b1fce799c3"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="04680a0f-a0e9-4bf8-81dd-7a45462bac15"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="438" y="5" width="111" height="20" uuid="06fced78-bdf5-48d7-92f7-e68e416e8cab"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="25" width="124" height="15" uuid="2d8ed8db-efc7-4c21-b524-e932c002a823"/>
+				<text><![CDATA[Kepada yang terhomat :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="13" y="40" width="158" height="20" uuid="40c0d4be-69f3-4acd-bcb3-f95b6d24d16f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="60" width="158" height="15" uuid="fd86b044-11b4-4174-8fe3-9dba4acce4e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[di tempat]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="130" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="110" width="72" height="20" uuid="5872cf1f-9838-41fd-b147-b2db11941016"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="110" width="193" height="20" uuid="7e90f835-2cd2-43b4-9956-08f10ac4bf48"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="110" width="69" height="20" uuid="24c2e563-446e-4db7-8365-e02803d99da4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BAHASA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="110" width="61" height="20" uuid="9676730a-29fc-4002-b65b-70bea01d439c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="110" width="160" height="20" uuid="a07f99d3-d37a-443e-bd9a-a0957881010a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOTO SAMPUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="15" uuid="6b88c2d2-7846-489c-bb1c-b20c05719c13"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[	Perihal peminjaman buku yang telah anda lakukan pada :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="36" width="555" height="15" uuid="f0435dda-80fa-4864-a741-f1bb86d8a352"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[	Dimohon untuk mengembalikan buku tepat pada waktunya, jikalau pengembalian buku melebihi tanggal  yang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="51" width="529" height="15" uuid="69df8cc2-96fa-4aa3-939d-393bf8e9ef50"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ditentukan maka akan dikenakan sanksi. Oleh karena itu kami mengirim list buku yang anda pinjam sehingga anda ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="18" width="44" height="15" uuid="5ba21bfb-5bf9-4568-b383-048231549e4d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="102" y="18" width="69" height="15" uuid="fc0163fe-ee02-4e95-ac3e-f44420e7c4be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tgl1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="171" y="18" width="17" height="15" uuid="c3694270-6666-4056-9eae-57917abbaf2e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[s/d]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="188" y="18" width="69" height="15" uuid="4fc94d56-3481-483f-bbd0-bd31813afedc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tgl2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="66" width="529" height="15" uuid="cec0123b-3381-40e9-b376-6a03b7bb0b25"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[dapat mempersiapkan buku tersebut pada waktunaya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="86" width="552" height="24" uuid="b307ded6-6bf3-459c-9aca-ef35957418d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DAFTAR BUKU]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="83" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="72" height="83" uuid="4cc6db03-4af2-46c0-8f28-206a5eb46db9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{buku.idBuku}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="0" width="193" height="83" uuid="62d9a05c-0e44-4358-bc1c-14883ee8c768"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{buku.judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="0" width="69" height="83" uuid="4979d70f-ac07-491b-b414-e4fb211caae4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{buku.bahasa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="0" width="61" height="83" uuid="f2731bee-fabd-4440-b920-125a52d6f969"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="395" y="0" width="160" height="83" uuid="46b9c1ac-75fb-4ab6-b92f-6bd60ec06874"/>
+			</rectangle>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="398" y="3" width="154" height="78" uuid="933d5a07-11c6-4c87-aef4-f088c3726123"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA[new java.io.ByteArrayInputStream($F{buku.fotoSampul})]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="80" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
